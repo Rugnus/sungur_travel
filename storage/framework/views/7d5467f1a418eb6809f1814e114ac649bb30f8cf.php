@@ -13,83 +13,83 @@
         <div class="row">
             <div class="d-flex flex-row justify-content-between bd-highlight col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Изменить клиента c id: {{ $client->id }}</h2>
+                    <h2>Изменить клиента c id: <?php echo e($client->id); ?></h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn " href="{{ route('clients.index') }}" style="padding: 10px; background-color: #FFA400; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: #fff;">Вернуться назад <i class="fas fa-sign-out-alt"></i></a>
+                    <a class="btn " href="<?php echo e(route('clients.index')); ?>" style="padding: 10px; background-color: #FFA400; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: #fff;">Вернуться назад <i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
         </div>
 
-        @if (count($errors) > 0)
+        <?php if(count($errors) > 0): ?>
   	<div class="alert alert-danger">
     		<ul>
-      			@foreach ($errors->all() as $error)
-        		<li>{{ $error }}</li>
-      			@endforeach
+      			<?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        		<li><?php echo e($error); ?></li>
+      			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     		</ul>
   	</div>
-	@endif
+	<?php endif; ?>
 
-        <form action="{{ route('clients.update',$client->id) }}" method="POST">
-            @csrf
+        <form action="<?php echo e(route('clients.update',$client->id)); ?>" method="POST">
+            <?php echo csrf_field(); ?>
 
-            @method('PUT')
+            <?php echo method_field('PUT'); ?>
             <div class="row">
                 <div class="mb-3">
                         <strong>Имя:</strong>
-                        <input type="text" name="name" value="{{ $client->name }}" class="form-control" >
+                        <input type="text" name="name" value="<?php echo e($client->name); ?>" class="form-control" >
                 </div>
                 <div class="mb-3">
                         <strong>Фамилия:</strong>
-                        <input type="text" name="surname" value="{{ $client->surname }}" class="form-control" >
+                        <input type="text" name="surname" value="<?php echo e($client->surname); ?>" class="form-control" >
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Имя:</strong>
-                        <input type="text" name="patronymic" value="{{ $client->patronymic }}" class="form-control" >
+                        <input type="text" name="patronymic" value="<?php echo e($client->patronymic); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата рождения:</strong>
-                        <input type="date" name="bth" value="{{ $client->bth }}" class="form-control" >
+                        <input type="date" name="bth" value="<?php echo e($client->bth); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Серия паспорта:</strong>
-                        <input type="text" name="series_passport" value="{{ $client->series_passport }}" class="form-control" >
+                        <input type="text" name="series_passport" value="<?php echo e($client->series_passport); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Номер паспорта:</strong>
-                        <input type="text" name="number_passport" value="{{ $client->number_passport }}" class="form-control" >
+                        <input type="text" name="number_passport" value="<?php echo e($client->number_passport); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата выдачи:</strong>
-                        <input type="date" name="date_of_issue" value="{{ $client->date_of_issue }}" class="form-control" >
+                        <input type="date" name="date_of_issue" value="<?php echo e($client->date_of_issue); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата окончания срока действия:</strong>
-                        <input type="date" name="expiration_date" value="{{ $client->expiration_date }}" class="form-control" >
+                        <input type="date" name="expiration_date" value="<?php echo e($client->expiration_date); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Орган выдавший документ:</strong>
-                        <input type="text" name="government_agency" value="{{ $client->government_agency }}" class="form-control" >
+                        <input type="text" name="government_agency" value="<?php echo e($client->government_agency); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Место рождения:</strong>
-                        <input type="text" name="place_of_birth" value="{{ $client->place_of_birth }}" class="form-control" >
+                        <input type="text" name="place_of_birth" value="<?php echo e($client->place_of_birth); ?>" class="form-control" >
                     </div>
                 </div>
                 <div class="mb-3">
@@ -120,3 +120,4 @@
 
 </body>
 </html>
+<?php /**PATH /Users/macbookpro16/Downloads/laba5/orkis_web/resources/views/clients/edit.blade.php ENDPATH**/ ?>

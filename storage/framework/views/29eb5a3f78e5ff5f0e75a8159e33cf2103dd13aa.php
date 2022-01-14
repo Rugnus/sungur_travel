@@ -2,7 +2,7 @@
 
 <div class="d-flex flex-row justify-content-between">
 <div><h2>Соглашения без договора</h2></div>
-<div class="d-flex justify-content-end" style="align-self: center;"><a href="agreement/create" class="btn btn-success mb-2">Создать новое соглашение</a></div>
+<div class="d-flex justify-content-end" style="align-self: center; padding: 10px; background-color: #17D7A0; border-radius: 15px; box-shadow: 0px 1px 12px 2px rgba(34, 60, 80, 0.4);"><a href="agreement/create" class="" style="color: #FFF; text-decoration: none;">Создать новое соглашение</a></div>
 </div>
 
 <div class="d-flex flex-column bd-highlight mb-3 align-items-center">
@@ -46,7 +46,7 @@
                 <form action="<?php echo e(route('agreement.destroy',$agreement->id)); ?>" method="post">
                     <?php echo csrf_field(); ?>
                     <?php echo method_field('DELETE'); ?>
-                    <button  type="submit"  class="btn btn-danger ms-2">Удалить</button>
+                    <button  type="submit"  class="btn btn-danger ms-2" style="padding: 10px; background-color: #CD1818; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4);">Удалить</button>
                 </form>
             </div>
         </div>

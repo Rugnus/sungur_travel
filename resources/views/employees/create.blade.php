@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container p-5" style="margin-bottom: 100px;">
+<div class="container p-5" style="margin-bottom: 100px; background-color: #F2FFE9;">
 <h1>Создание нового сотрудника</h1>
 @if (count($errors) > 0)
   <div class="alert alert-danger">
@@ -24,15 +24,15 @@
     {{ csrf_field() }}
     <div class="mb-3">
         <label for="name" class="form-label">Имя:</label>
-        <input type="text" name='name' class="form-control" id="name"  placeholder="Руфина">
+        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя">
     </div>
     <div class="mb-3">
         <label for="surname" class="form-label">Фамилия:</label>
-        <input type="text" name='surname' class="form-control" id="surname" placeholder="Гатауллина">
+        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие">
     </div>
     <div class="mb-3">
         <label for="patronymic" class="form-label">Отчество:</label>
-        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ринатовна">
+        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество">
     </div>
     <div class="mb-3">
         <label for="bth" class="form-label">День рождения:</label>
@@ -69,8 +69,8 @@
         <input type="text" name='password' class="form-control" id="password" placeholder="**********">
     </div>
     <div class="md-3">
-        <button type="submit" class="btn btn-primary">Добавить</button>
-        <a href="/employees" class="btn btn-danger">Отменить</a>
+        <button type="submit" class="btn" style="padding: 10px; background-color: #2F86A6; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: white">Добавить</button>
+        <a href="/employees" class="btn btn-danger" style="padding: 10px; background-color: #CD1818; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4);">Отменить</a>
     </div>
     
 </form>

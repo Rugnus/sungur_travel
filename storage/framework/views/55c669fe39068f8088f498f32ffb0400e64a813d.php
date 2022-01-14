@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
    <?php echo $__env->yieldContent('title'); ?>
 </head>
@@ -87,13 +90,13 @@
     <div class="container" style="margin-top: 10px;">
 <?php echo $__env->yieldContent('content'); ?>  
     </div>
-<div class='footer' style="background-color: #7CD1B8 !important; 
+<!-- <div class='footer' style="background-color: #7CD1B8 !important; 
     left: 0; bottom: 0; 
     position: fixed;
     padding: 10px; 
     color: #67686b; 
     width: 100%;">
-Вы зашли под именем: <?php echo e(Auth::user()->name); ?></div>
+Вы зашли под именем: <?php echo e(Auth::user()->name); ?></div> -->
 </body>
 </html>
 <?php /**PATH /Users/macbookpro16/Downloads/laba5/orkis_web/resources/views/layout.blade.php ENDPATH**/ ?>

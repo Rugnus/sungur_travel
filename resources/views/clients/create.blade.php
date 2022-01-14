@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container p-5" style="margin-bottom: 100px;">
+<div class="container p-5" style="margin-bottom: 100px; background-color: #F2FFE9;">
 <h1>Создание нового клиента</h1>
 @if (count($errors) > 0)
   <div class="alert alert-danger">
@@ -24,15 +24,15 @@
     {{ csrf_field() }}
     <div class="mb-3">
         <label for="name" class="form-label">Имя:</label>
-        <input type="text" name='name' class="form-control" id="name"  placeholder="Руфина">
+        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя">
     </div>
     <div class="mb-3">
         <label for="surname" class="form-label">Фамилия:</label>
-        <input type="text" name='surname' class="form-control" id="surname" placeholder="Гатауллина">
+        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие">
     </div>
     <div class="mb-3">
         <label for="patronymic" class="form-label">Отчество:</label>
-        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ринатовна">
+        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество">
     </div>
     <div class="mb-3">
         <label for="bth" class="form-label">День рождения:</label>
@@ -40,12 +40,12 @@
     </div>
     <div class="mb-3">
         <label for="serialPassport" class="form-label">Серия паспорта:</label>
-        <input type="text" name='series_passport' class="form-control" id="serialPassport" placeholder="0987">
+        <input type="text" name='series_passport' class="form-control" id="serialPassport" placeholder="2424">
         <div id="nameSerialPassport" class="form-text"> Мы никому не сообщим ваши паспортные данные.</div>
     </div>
     <div class="mb-3">
         <label for="numberPassport" class="form-label">Номер паспорта:</label>
-        <input type="text" name='number_passport' class="form-control" id="numberPassport" placeholder="123456">
+        <input type="text" name='number_passport' class="form-control" id="numberPassport" placeholder="987654">
         <div id="nameNumberPassport" class="form-text">Мы никому не сообщим ваши паспортные данные.</div>
     </div>
     <div class="mb-3">
@@ -62,7 +62,7 @@
     </div>
     <div class="mb-3">
         <label for="placeOfBirth" class="form-label">Место рождения:</label>
-        <input type="text" name='place_of_birth' class="form-control" id="placeOfBirth" placeholder="Денискино">
+        <input type="text" name='place_of_birth' class="form-control" id="placeOfBirth" placeholder="Лос-Анджелес">
     </div>
     <div class="mb-3">
         <label for="sex" class="form-label">Пол:</label>
@@ -82,8 +82,8 @@
         </select>
     </div>
     <div class="md-3">
-        <button type="submit" class="btn btn-primary">Добавить</button>
-        <a href="/clients" class="btn btn-danger">Отменить</a>
+        <button type="submit" class="btn" style="padding: 10px; background-color: #2F86A6; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: white">Добавить</button>
+        <a href="/clients" class="btn btn-danger" style="padding: 10px; background-color: #CD1818; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4);">Отменить</a>
     </div>
     
 </form>

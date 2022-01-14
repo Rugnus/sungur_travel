@@ -2,13 +2,13 @@
 
 <div class="d-flex flex-row justify-content-between">
     <div><h2>Список клиентов</h2></div>
-    <div class="d-flex justify-content-end" style="align-self: center;"><a href="clients/create" class="btn btn-success mb-2">Добавить нового клиента</a></div>
+    <div class="d-flex justify-content-end" style="align-self: center; padding: 10px; background-color: #17D7A0; border-radius: 15px; box-shadow: 0px 1px 12px 2px rgba(34, 60, 80, 0.4);"><a href="clients/create" class="" style="color: #FFF; text-decoration: none; ">Добавить нового клиента</a></div>
 </div>
 
-<div class="d-flex flex-column bd-highlight mb-3 align-items-center">
+<div class="d-flex flex-column bd-highlight mb-3 align-items-center mt-3">
 <?php if(count($clients) > 0): ?>
     <?php $__currentLoopData = $clients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $client): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="d-flex flex-row justify-content-between bd-highlight mb-3 card" style="width: 50rem;">
+        <div class="d-flex flex-row justify-content-between bd-highlight mb-3 card" style="width: 100%; background-color: #F2FFE9; border-radius: 20px; box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);">
             <div class="p-2 bd-highlight" style="align-self:center">
                 <strong>Имя:</strong>
                 <p><?php echo e($client->name); ?></p>
@@ -38,14 +38,14 @@
                 <p><?php echo e($client->type_client); ?></p>
             </div>
             <div class="p-2 bd-highlight d-flex  align-items-end">
-                <div>
-                    <a class="btn btn-primary" href="<?php echo e(route('clients.edit', $client->id)); ?>">Изменить</a>
+                <div style="padding: 10px; background-color: #009DAE; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4);">
+                    <a class="" href="<?php echo e(route('clients.edit', $client->id)); ?>" style="color: #FFF; text-decoration: none;">Изменить</a>
                 </div>
                 <div>
                     <form action="<?php echo e(route('clients.destroy',$client->id)); ?>" method="post">
                         <?php echo csrf_field(); ?>
                         <?php echo method_field('DELETE'); ?>
-                        <button  type="submit"  class="btn btn-danger ms-2">Удалить</button>
+                        <button  type="submit"  class="btn btn-danger ms-2" style="padding: 10px; background-color: #CD1818; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4);">Удалить</button>
                     </form>
                 </div>
             </div>

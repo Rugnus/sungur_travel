@@ -9,8 +9,6 @@
 
     <div class='card' style='
         width: 50%;
-        margin-left: auto;
-        margin-right: auto;
         margin-top: 30px;'
     >
     <form action="{{ route('voucher.getData') }}" method="get">
@@ -33,7 +31,7 @@
             <div class="p-2 bd-highlight d-flex  align-items-end">
                 <div>
                     <!-- href="javascript:window.print()"  " -->
-                        <button type="submit" class="btn btn-info" >Предварительный просмотр данных</button>
+                        <button type="submit" class="btn" style="padding: 10px; background-color: #6166B3; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: #fff;" >Предварительный просмотр данных</button>
                 </div>
             </div>
         </div>
