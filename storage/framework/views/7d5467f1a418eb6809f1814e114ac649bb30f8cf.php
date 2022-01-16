@@ -38,64 +38,64 @@
             <div class="row">
                 <div class="mb-3">
                         <strong>Имя:</strong>
-                        <input type="text" name="name" value="<?php echo e($client->name); ?>" class="form-control" >
+                        <input type="text" name="name" value="<?php echo e($client->name); ?>" class="form-control" style="border-radius: 15px;">
                 </div>
                 <div class="mb-3">
                         <strong>Фамилия:</strong>
-                        <input type="text" name="surname" value="<?php echo e($client->surname); ?>" class="form-control" >
+                        <input type="text" name="surname" value="<?php echo e($client->surname); ?>" class="form-control" style="border-radius: 15px;">
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
-                        <strong>Имя:</strong>
-                        <input type="text" name="patronymic" value="<?php echo e($client->patronymic); ?>" class="form-control" >
+                        <strong>Отчество:</strong>
+                        <input type="text" name="patronymic" value="<?php echo e($client->patronymic); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата рождения:</strong>
-                        <input type="date" name="bth" value="<?php echo e($client->bth); ?>" class="form-control" >
+                        <input type="date" name="bth" value="<?php echo e($client->bth); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Серия паспорта:</strong>
-                        <input type="text" name="series_passport" value="<?php echo e($client->series_passport); ?>" class="form-control" >
+                        <input type="text" name="series_passport" value="<?php echo e($client->series_passport); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Номер паспорта:</strong>
-                        <input type="text" name="number_passport" value="<?php echo e($client->number_passport); ?>" class="form-control" >
+                        <input type="text" name="number_passport" value="<?php echo e($client->number_passport); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата выдачи:</strong>
-                        <input type="date" name="date_of_issue" value="<?php echo e($client->date_of_issue); ?>" class="form-control" >
+                        <input type="date" name="date_of_issue" value="<?php echo e($client->date_of_issue); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата окончания срока действия:</strong>
-                        <input type="date" name="expiration_date" value="<?php echo e($client->expiration_date); ?>" class="form-control" >
+                        <input type="date" name="expiration_date" value="<?php echo e($client->expiration_date); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Орган выдавший документ:</strong>
-                        <input type="text" name="government_agency" value="<?php echo e($client->government_agency); ?>" class="form-control" >
+                        <input type="text" name="government_agency" value="<?php echo e($client->government_agency); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Место рождения:</strong>
-                        <input type="text" name="place_of_birth" value="<?php echo e($client->place_of_birth); ?>" class="form-control" >
+                        <input type="text" name="place_of_birth" value="<?php echo e($client->place_of_birth); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Пол:</strong>
-                        <select id="sex" name='type_sex' class="form-select" aria-label="Default select example" required >
+                        <select id="sex" name='type_sex' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
                             <option <?php if($client->type_sex == 'ж') echo("selected"); ?>  value="1">Женский</option>
                             <option <?php if($client->type_sex == 'м') echo("selected"); ?>  value="2">Мужской</option>
                         </select>
@@ -104,7 +104,7 @@
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Статус:</strong>
-                        <select id="typeClient" name='type_client' class="form-select" aria-label="Default select example" required >
+                        <select id="typeClient" name='type_client' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
                             <option <?php if($client->type_client == 'VIP') echo("selected"); ?> value="1">VIP</option>
                             <option <?php if($client->type_client == 'Привилегированный') echo("selected"); ?> value="2">Привилегированный</option>
                             <option <?php if($client->type_client == 'Обычный')  echo("selected"); ?>  value="3">Обычный</option>

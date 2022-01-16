@@ -11,17 +11,18 @@
 
 <div class="container p-5" style="margin-bottom: 100px;">
 <h1>Создание нового платежа</h1>
-@if (count($errors) > 0)
+<?php if(count($errors) > 0): ?>
   <div class="alert alert-danger">
     <ul>
-      @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
+      <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <li><?php echo e($error); ?></li>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>
-@endif
+<?php endif; ?>
 <form method="post" action="/payment" enctype="multipart/form-data">
-    {{ csrf_field() }}
+    <?php echo e(csrf_field()); ?>
+
     <div class="mb-3">
         <label for="date_payment" class="form-label">Дата оплаты:</label>
         <input type="date" name='date_payment' class="form-control" id="date_payment" style="border-radius: 15px;" value="<?php echo date("Y-m-d");?>">
@@ -30,9 +31,9 @@
         <label for="organization" class="form-label">Организация:</label>
         <select onchange="getOrganization(this.value)" id="organization" name='organization' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
             <option disabled>-- Выберите организацию --</option>
-            @foreach($listOrganizationsWithContact as $organization)
-                <option value="{{ $organization->id }}">{{ $organization->organization_name }}</option>
-            @endforeach
+            <?php $__currentLoopData = $listOrganizationsWithContact; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $organization): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($organization->id); ?>"><?php echo e($organization->organization_name); ?></option>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </select>
     </div>
     <div class="mb-3">
@@ -101,3 +102,4 @@
 </html>
 
 
+<?php /**PATH /Users/macbookpro16/Downloads/laba5/orkis_web/resources/views/payment/create.blade.php ENDPATH**/ ?>
