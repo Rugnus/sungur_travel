@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Авторизация</div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #D3E4CD;">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

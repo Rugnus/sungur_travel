@@ -35,11 +35,11 @@
             <input type="hidden" value="{{ $agreements[0]->id }}" name="IdAgreement">
             <div class="mb-3">
                 <label for="date" class="form-label">Дата создания соглашения:</label>
-                <input type="date" name='date' class="form-control" id="date" value="{{ $agreements[0]->date }}">
+                <input type="date" name='date' class="form-control" id="date" style="border-radius: 15px;" value="{{ $agreements[0]->date }}">
             </div>
             <div class="mb-3">
                 <label for="org" class="form-label">Организация:</label>
-                <select id="org" name='Id_organization' class="form-select" aria-label="Default select example" required >
+                <select id="org" name='Id_organization' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                     @foreach($listOrganizations as $organization)
                     <option value="{{ $organization->id }}" @if ( $agreements[0]->organization_id == $organization->id) { selected } @endif>{{ $organization->organization_name }}</option>
                     @endforeach
@@ -47,7 +47,7 @@
             </div>
             <div class="mb-3">
                 <label for="country" class="form-label">Страна посещения:</label>
-                <select onchange="getCountry(this.value)" id="country"  class="form-select" aria-label="Default select example" required >
+                <select onchange="getCountry(this.value)" id="country" style="border-radius: 15px;" class="form-select" aria-label="Default select example" required >
                     <option disabled>-- Выберите страну посещения --</option>
                     @foreach($listCountry as $country)
                         <option value="{{ $country->id }}" @if ( $agreements[0]->country_id == $country->id) { selected } @endif >{{ $country->name_country }}</option>
@@ -56,13 +56,13 @@
             </div>
             <div class="mb-3">
                 <label for="Id_city" class="form-label">Город посещения:</label>
-                <select  id="Id_city" name='Id_city' class="form-select" aria-label="Default select example" required >
+                <select  id="Id_city" name='Id_city' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                     <option disabled>-- Выберите город посещения --</option>
                 </select>
             </div>
             <div class="mb-3">
             <label for="client" class="form-label">Клиент:</label>
-                <select id="client" name='Id_client' class="form-select" aria-label="Default select example" required >
+                <select id="client" name='Id_client' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                     <option disabled>-- Выберите клиента --</option>
                     @foreach($listClient as $client)
                         <option value="{{ $client->id }}" @if ( $agreements[0]->client_id == $client->id) { selected } @endif>{{ $client->surname }} {{ $client->name }}  {{ $client->patronymic }}</option>
@@ -71,7 +71,7 @@
             </div>
             <div class="mb-3">
             <label for="agent" class="form-label">Агент:</label>
-                <select id="agent" name='Id_Agent' class="form-select" aria-label="Default select example" required >
+                <select id="agent" name='Id_Agent' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                     <option disabled>-- Выберите агента --</option>
                     @foreach($listAgent as $agent)
                         <option value="{{ $agent->id }}" @if ( $agreements[0]->agent_id == $agent->id) { selected } @endif >{{ $agent->surname }} {{ $agent->name }}  {{ $agent->patronymic }}</option>
@@ -80,15 +80,15 @@
             </div>    
             <div class="mb-3">
                 <label for="count" class="form-label">Количество участников поездки:</label>
-                <input id='count' type="text" name='number_of_participants' class="form-control"  value="{{ $agreements[0]->number_of_participants }}">
+                <input id='count' type="text" name='number_of_participants' class="form-control" style="border-radius: 15px;" value="{{ $agreements[0]->number_of_participants }}">
             </div>
             <div class="mb-3">
                 <label for="date_start" class="form-label">Дата начала поездки:</label>
-                <input id='date_start' type="date" name='start_of_trip' class="form-control" value="{{ $agreements[0]->start_of_trip }}" >
+                <input id='date_start' type="date" name='start_of_trip' class="form-control" style="border-radius: 15px;" value="{{ $agreements[0]->start_of_trip }}" >
             </div>
             <div class="mb-3">
                 <label for="date_end" class="form-label">Дата окончания поездки:</label>
-                <input id='date_end' type="date" name='end_of_trip' class="form-control" value="{{ $agreements[0]->end_of_trip }}" >
+                <input id='date_end' type="date" name='end_of_trip' class="form-control" style="border-radius: 15px;" value="{{ $agreements[0]->end_of_trip }}" >
             </div> 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Сохранить изменения</button>

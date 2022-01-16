@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
    <?php echo $__env->yieldContent('title'); ?>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #7CD1B8 !important;">
+<body style="background-color: #F5F5F5;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #7CD1B8 !important; border-radius: 20px 20px 20px 20px; box-shadow: 0px 6px 19px 0px rgba(34, 60, 80, 0.22);;">
         <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Тур агенство</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

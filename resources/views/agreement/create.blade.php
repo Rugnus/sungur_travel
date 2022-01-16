@@ -26,11 +26,11 @@
     {{ csrf_field() }}
     <div class="mb-3">
         <label for="date" class="form-label">Дата создания соглашения:</label>
-        <input type="date" name='date' class="form-control" id="date" value="<?php echo date("Y-m-d");?>">
+        <input type="date" name='date' class="form-control" id="date" style="border-radius: 15px;" value="<?php echo date("Y-m-d");?>">
     </div>
     <div class="mb-3">
         <label for="org" class="form-label">Организация:</label>
-        <select onchange="getOrganization(this.value)" id="org" name='organization_name' class="form-select" aria-label="Default select example" required >
+        <select onchange="getOrganization(this.value)" id="org" name='organization_name' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
             <option disabled>-- Выберите организацию --</option>
             @foreach($listOrganizations as $organization)
             <option value="{{ $organization->id }}">{{ $organization->organization_name }}</option>
@@ -39,7 +39,7 @@
     </div>
     <div class="mb-3">
         <label for="country" class="form-label">Страна посещения:</label>
-        <select onchange="getCountry(this.value)" id="country" name='country' class="form-select" aria-label="Default select example" required >
+        <select onchange="getCountry(this.value)" id="country" name='country' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
             <option disabled>-- Выберите страну посещения --</option>
             @foreach($listCountry as $country)
                 <option value="{{ $country->id }}">{{ $country->name_country }}</option>
@@ -48,7 +48,7 @@
     </div>
     <div class="mb-3">
     <label for="client" class="form-label">Клиент:</label>
-        <select id="client" name='client' class="form-select" aria-label="Default select example" required >
+        <select id="client" name='client' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите клиента --</option>
             @foreach($listClient as $client)
                 <option value="{{ $client->id }}">{{ $client->surname }} {{ $client->name }}  {{ $client->patronymic }}</option>
@@ -57,28 +57,28 @@
     </div>
     <div class="mb-3">
     <label for="agent" class="form-label">Агент:</label>
-        <select id="agent" name='agent' class="form-select" aria-label="Default select example" required >
+        <select id="agent" name='agent' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите агента --</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="count" class="form-label">Количество участников поездки:</label>
-        <input id='count' type="text" name='count' class="form-control"  placeholder='x'>
+        <input id='count' type="text" name='count' class="form-control" style="border-radius: 15px;" placeholder='x'>
     </div>
     <div class="mb-3">
         <label for="date_start" class="form-label">Дата начала поездки:</label>
-        <input id='date_start' type="date" name='date_start' class="form-control"  >
+        <input id='date_start' type="date" name='date_start' style="border-radius: 15px;" class="form-control"  >
     </div>
     <div class="mb-3">
         <label for="date_end" class="form-label">Дата окончания поездки:</label>
-        <input id='date_end' type="date" name='date_end' class="form-control"  >
+        <input id='date_end' type="date" name='date_end' style="border-radius: 15px;" class="form-control"  >
     </div>
     <div class='card' style='margin-top: 20px; margin-bottom: 20px;'>
     <div class="card-header">Города посещения:</div>
     <div class="card-body">
         <div class="d-flex flex-row justify-content-between bd-highlight mb-3">
             <div class='flex-fill'>
-                <select id="Id_city" name='Id_city' class="form-select" aria-label="Default select example" required >
+                <select id="Id_city" name='Id_city' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                     <option disabled value="-1">-- Выберите город посещения --</option>
                 </select>
             </div>

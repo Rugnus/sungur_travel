@@ -25,19 +25,19 @@
 
     <div class="mb-3">
         <label for="name" class="form-label">Имя:</label>
-        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя">
+        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="surname" class="form-label">Фамилия:</label>
-        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие">
+        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="patronymic" class="form-label">Отчество:</label>
-        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество">
+        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="bth" class="form-label">День рождения:</label>
-        <input type="date" name='bth' class="form-control" id="bth" >
+        <input type="date" name='bth' class="form-control" id="bth" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="photo" class="form-label">Фото:</label>
@@ -45,7 +45,7 @@
     </div>
     <div class="mb-3">
         <label for="position" class="form-label">Должность сотрудника:</label>
-        <select id="position" name='type_position' class="form-select" aria-label="Default select example" required >
+        <select id="position" name='type_position' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите должность сотрудника --</option>
             <option value="1">Бухгалтер</option>
             <option value="2">Администратор</option>
@@ -54,7 +54,7 @@
     </div>
     <div class="mb-3">
         <label for="Id_organization" class="form-label">Организация:</label>
-        <select id="Id_organization" name='Id_organization' class="form-select" aria-label="Default select example" required >
+        <select id="Id_organization" name='Id_organization' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите организацию --</option>
             <?php $__currentLoopData = $listOrganizations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $organization): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <option value="<?php echo e($organization->id); ?>"><?php echo e($organization->organization_name); ?></option>
@@ -63,11 +63,11 @@
     </div>
     <div class="mb-3">
         <label for="email" class="form-label">Email для входа в систему:</label>
-        <input type="email" name='email' class="form-control" id="email" placeholder="example@gmail.com">
+        <input type="email" name='email' class="form-control" id="email" placeholder="example@gmail.com" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="password" class="form-label">Пароль для входа в систему:</label>
-        <input type="text" name='password' class="form-control" id="password" placeholder="**********">
+        <input type="text" name='password' class="form-control" id="password" placeholder="**********" style="border-radius: 15px;">
     </div>
     <div class="md-3">
         <button type="submit" class="btn" style="padding: 10px; background-color: #2F86A6; border-radius: 15px; box-shadow: 0px 4px 12px 2px rgba(34, 60, 80, 0.4); color: white">Добавить</button>

@@ -15,7 +15,7 @@
         <div class="card-body">
             <div class="mb-3">
                 <label for="organization" class="form-label">Организация</label>
-                <select onchange="getOrganization(this.value)" name="organization" id="organization" class="form-select" aria-label="Default select example" required>
+                <select onchange="getOrganization(this.value)" name="organization" id="organization" class="form-select" style="border-radius: 15px;" aria-label="Default select example" required>
                     <option disabled>-- Выберите организацию --</option>
                     @foreach ($vouchers as $voucher)
                         <option value="{{ $voucher->org_id }}">{{ $voucher->organization_name }}</option>
@@ -24,7 +24,7 @@
             </div>
             <div class="mb-3">
                 <label for="contract" class="form-label">Номер договора</label>
-                <select name="contract" id="contract" class="form-select">
+                <select name="contract" id="contract" class="form-select" style="border-radius: 15px;">
                     <option disabled>-- Выберите договор --</option>
                 </select>
             </div>

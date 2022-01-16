@@ -2,7 +2,7 @@
 @section ('content')
 
 <div class="d-flex flex-row justify-content-between">
-<div><h2>Не оплаченные договора</h2></div>
+<div><h2>Неоплаченные договора</h2></div>
 <div class="d-flex justify-content-end" style="align-self: center; padding: 10px; background-color: #17D7A0; border-radius: 15px; box-shadow: 0px 1px 12px 2px rgba(34, 60, 80, 0.4);"><a href="contract/create" class="" style="color: #FFF; text-decoration: none;" >Создать новый договор</a></div>
 </div>
 

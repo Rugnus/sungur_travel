@@ -37,22 +37,22 @@
             <div class="row">
                 <div class="mb-3">
                         <strong>Имя:</strong>
-                        <input type="text" name="name" value="<?php echo e($employee->name); ?>" class="form-control" >
+                        <input type="text" name="name" value="<?php echo e($employee->name); ?>" class="form-control" style="border-radius: 15px;">
                 </div>
                 <div class="mb-3">
                         <strong>Фамилия:</strong>
-                        <input type="text" name="surname" value="<?php echo e($employee->surname); ?>" class="form-control" >
+                        <input type="text" name="surname" value="<?php echo e($employee->surname); ?>" class="form-control" style="border-radius: 15px;" >
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
-                        <strong>Имя:</strong>
-                        <input type="text" name="patronymic" value="<?php echo e($employee->patronymic); ?>" class="form-control" >
+                        <strong>Отчество:</strong>
+                        <input type="text" name="patronymic" value="<?php echo e($employee->patronymic); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-group">
                         <strong>Дата рождения:</strong>
-                        <input type="date" name="bth" value="<?php echo e($employee->bth); ?>" class="form-control" >
+                        <input type="date" name="bth" value="<?php echo e($employee->bth); ?>" class="form-control" style="border-radius: 15px;">
                     </div>
                 </div>
                 <div class="mb-3">
@@ -63,9 +63,9 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <div class="form-group">
+                    <div class="form-group" >
                         <strong>Должность:</strong>
-                        <select id="position" name='type_position' class="form-select" aria-label="Default select example" required >
+                        <select id="position" name='type_position' class="form-select" style="border-radius: 15px;" aria-label="Default select example" required >
                             <option <?php if($employee->type_position == 'Бухгалтер') echo("selected"); ?>  value="1">Бухгалтер</option>
                             <option <?php if($employee->type_position == 'Администратор') echo("selected"); ?>  value="2">Администратор</option>
                             <option <?php if($employee->type_position == 'Менеджер') echo("selected"); ?>  value="3">Менеджер</option>

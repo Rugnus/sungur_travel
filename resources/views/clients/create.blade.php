@@ -24,15 +24,15 @@
     {{ csrf_field() }}
     <div class="mb-3">
         <label for="name" class="form-label">Имя:</label>
-        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя">
+        <input type="text" name='name' class="form-control" id="name"  placeholder="Ваше имя" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="surname" class="form-label">Фамилия:</label>
-        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие">
+        <input type="text" name='surname' class="form-control" id="surname" placeholder="Ваше Фамилие" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="patronymic" class="form-label">Отчество:</label>
-        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество">
+        <input type="text" name='patronymic' class="form-control" id="patronymic" placeholder="Ваше Отчество" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="bth" class="form-label">День рождения:</label>
@@ -40,33 +40,33 @@
     </div>
     <div class="mb-3">
         <label for="serialPassport" class="form-label">Серия паспорта:</label>
-        <input type="text" name='series_passport' class="form-control" id="serialPassport" placeholder="2424">
+        <input type="text" name='series_passport' class="form-control" id="serialPassport" placeholder="2424" style="border-radius: 15px;">
         <div id="nameSerialPassport" class="form-text"> Мы никому не сообщим ваши паспортные данные.</div>
     </div>
     <div class="mb-3">
         <label for="numberPassport" class="form-label">Номер паспорта:</label>
-        <input type="text" name='number_passport' class="form-control" id="numberPassport" placeholder="987654">
+        <input type="text" name='number_passport' class="form-control" id="numberPassport" placeholder="987654" style="border-radius: 15px;">
         <div id="nameNumberPassport" class="form-text">Мы никому не сообщим ваши паспортные данные.</div>
     </div>
     <div class="mb-3">
         <label for="dateOfIssue" class="form-label">Дата выдачи:</label>
-        <input type="date" name='date_of_issue' class="form-control" id="dateOfIssue" >
+        <input type="date" name='date_of_issue' class="form-control" id="dateOfIssue"  style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="expirationDate" class="form-label">Срок окончания действия:</label>
-        <input type="date" name='expiration_date' class="form-control" id="expirationDate">
+        <input type="date" name='expiration_date' class="form-control" id="expirationDate" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="governmentAgency" class="form-label">Орган выдавший документ:</label>
-        <input type="text" name='government_agency' class="form-control" id="governmentAgency" placeholder="МВД России по г Москва">
+        <input type="text" name='government_agency' class="form-control" id="governmentAgency" placeholder="МВД России по г Москва" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="placeOfBirth" class="form-label">Место рождения:</label>
-        <input type="text" name='place_of_birth' class="form-control" id="placeOfBirth" placeholder="Лос-Анджелес">
+        <input type="text" name='place_of_birth' class="form-control" id="placeOfBirth" placeholder="Лос-Анджелес" style="border-radius: 15px;">
     </div>
     <div class="mb-3">
         <label for="sex" class="form-label">Пол:</label>
-        <select id="sex" name='type_sex' class="form-select" aria-label="Default select example" required >
+        <select id="sex" name='type_sex' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите пол клиента --</option>
             <option value="1">Женский</option>
             <option value="2">Мужской</option>
@@ -74,7 +74,7 @@
     </div>
     <div class="mb-3">
         <label for="typeClient" class="form-label">Статус:</label>
-        <select id="typeClient" name='type_client' class="form-select" aria-label="Default select example" required >
+        <select id="typeClient" name='type_client' class="form-select" aria-label="Default select example" style="border-radius: 15px;" required >
             <option disabled>-- Выберите статус клиента --</option>
             <option value="1">Привилегированный</option>
             <option value="2">VIP</option>

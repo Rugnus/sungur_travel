@@ -13,17 +13,18 @@
 
 <div class="container p-5" style="margin-bottom: 100px;">
 <h1>Создание нового договора</h1>
-@if (count($errors) > 0)
+<?php if(count($errors) > 0): ?>
   <div class="alert alert-danger">
     <ul>
-      @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
+      <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <li><?php echo e($error); ?></li>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>
-@endif
+<?php endif; ?>
 <form method="post" action="/contract" enctype="multipart/form-data">
-    {{ csrf_field() }}
+    <?php echo e(csrf_field()); ?>
+
     <div class="mb-3">
         <label for="date" class="form-label">Дата создания договора:</label>
         <input type="date" name='date' class="form-control" style="border-radius: 15px;" id="date" value="<?php echo date("Y-m-d");?>">
@@ -32,9 +33,9 @@
         <label for="id_agreement" class="form-label">Номер соглашения:</label>
         <select onchange="getAgreementId(this.value)" id="id_agreement" style="border-radius: 15px;" name='id_agreement' class="form-select" aria-label="Default select example" required id='id_agreement'>
             <option disabled>-- Выберите соглашение --</option>
-            @foreach($listContract as $agreement)
-            <option value="{{ $agreement->id_agreement_hasnt_contract }}">{{ $agreement->id_agreement_hasnt_contract }}</option>
-            @endforeach
+            <?php $__currentLoopData = $listContract; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $agreement): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($agreement->id_agreement_hasnt_contract); ?>"><?php echo e($agreement->id_agreement_hasnt_contract); ?></option>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </select>
     </div>
     <div class="mb-3">
@@ -335,3 +336,4 @@
 </script>
 
 
+<?php /**PATH /Users/macbookpro16/Downloads/laba5/orkis_web/resources/views//contract/create.blade.php ENDPATH**/ ?>

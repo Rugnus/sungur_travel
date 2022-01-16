@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header">Авторизация</div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #D3E4CD;">
                     <form method="POST" action="<?php echo e(route('login')); ?>">
                         <?php echo csrf_field(); ?>
 
